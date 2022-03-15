@@ -37,4 +37,6 @@ public class AuthSteps  {
         makeScreenshot();
         authPage.getAuthForm().getSignInButton().click();
     }
+
+
 }

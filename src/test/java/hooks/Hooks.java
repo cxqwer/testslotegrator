@@ -3,11 +3,8 @@ package hooks;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import org.junit.Assume;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.net.MalformedURLException;
 
 import static hooks.RunHooks.*;
 
@@ -19,6 +16,12 @@ import static hooks.RunHooks.*;
  */
 public class Hooks {
     private static final Logger logger = LoggerFactory.getLogger(Hooks.class);
+    private static Scenario scenario;
+
+    @Before(order = 10)
+    public void setScenario(Scenario scenario) {
+        this.scenario = scenario;
+    }
 
     @Before
     public void startScenario(Scenario scenario) {
@@ -38,5 +41,4 @@ public class Hooks {
         makeWithBrowserAfterTests(scenario);
         logger.info("------------------------------------------------------------");
     }
-
 }

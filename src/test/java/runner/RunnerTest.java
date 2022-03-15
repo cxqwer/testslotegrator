@@ -1,14 +1,15 @@
 package runner;
 
+import dao.common.AutotestCache;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.runner.RunWith;
 
 /**
- * Класс для запуска тестов с помощью Cucumber framework
+ * Class for running tests using the Cucumber framework
  *
- * @author chebotarev@speechpro.com
+ * @author cxqwer@yandex.ru
  */
 @RunWith(Cucumber.class)
 @Slf4j
@@ -20,4 +21,5 @@ import org.junit.runner.RunWith;
         tags = "@all"
 )
 public class RunnerTest {
+   public static AutotestCache CACHE = new AutotestCache();
 }

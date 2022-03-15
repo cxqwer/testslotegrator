@@ -1,9 +1,9 @@
+@UI
 @All
-@PLAYER_MANAGEMENT
 
-Feature: PLAYER MANAGEMENT
+Feature: PLAYER MANAGEMENT ui
 
-  Scenario: Сортировка таблицы игроков по Username
+  Scenario: Sorting the table of players by Username
     When Open auth page
     Then On the authorization page display a list of items:
       | Login Input    |
